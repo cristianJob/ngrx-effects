@@ -1,1 +1,25 @@
-<p>usuario works!</p>
+@if(error) {
+<div class="alert alert-danger" role="alert">
+Se produjo un error. Vuelve a intentarlo mas tarde
+</div>
+}
+
+@if(loading) {
+<div class="d-flex justify-content-center">
+  <div class="spinner-border" role="status">
+    <span class="visually-hidden">Loading...</span>
+  </div>
+</div>
+} @else {
+<div class="row">
+    <div class="col-4">
+       <img [src]="usuario.avatar" class="img-thumbnail">
+    </div>
+    <div class="col">
+     <ul class="list-group">
+      <li class="list-group-item"><strong>Nombre: </strong>{{usuario.first_name}}</li>
+      <li class="list-group-item"><strong>Apellido: </strong>{{usuario.last_name}}</li>
+     </ul>
+    </div>
+</div>
+}

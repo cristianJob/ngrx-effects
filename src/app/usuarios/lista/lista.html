@@ -1,3 +1,15 @@
+@if(error) {
+<div class="alert alert-danger" role="alert">
+Se produjo un error. Vuelve a intentarlo mas tarde
+</div>
+}
+@if(loading) {
+<div class="d-flex justify-content-center">
+  <div class="spinner-border" role="status">
+    <span class="visually-hidden">Loading...</span>
+  </div>
+</div>
+} @else {
 <div class="row row-cols-1 row-cols-md-3 g-4">
   @for ( user of usuario; track user.id) {
     <div class="col">
@@ -12,3 +24,4 @@
     </div>
   }
 </div>
+}

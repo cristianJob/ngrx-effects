@@ -15,4 +15,11 @@ getUser() {
     map(res => res.data)
   );
 }
+
+getUserById(id: string) {
+  const headers = { 'x-api-key': 'reqres-free-v1' };
+  return this.http.get<{ data: any }>(`${this.URL}/users/${id}`, { headers }).pipe(
+    map(res => res.data)
+  );
+}
 }
