@@ -3,7 +3,7 @@ import { inject, Injectable } from '@angular/core';
 import { Actions, createEffect, ofType } from '@ngrx/effects';
 import { mergeMap, map, tap, catchError } from 'rxjs/operators';
 
-import { cargarUsuarios, cargarUsuariosError, cargarUsuariosSuccess } from '../actions/usuarios.actions';
+import { cargarUsuarios, cargarUsuariosError, cargarUsuariosSuccess } from '../actions';
 import { UsuarioService } from '../../services/usuario-service';
 import { of } from 'rxjs';
 

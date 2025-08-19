@@ -25,7 +25,8 @@ export const usuarioReducer = createReducer(
         ...state,
         loading: false,
         loaded: true,
-        user: usuario
+        user: usuario,
+        error: null
     })),
     on(cargarUsuarioError, (state, { payload }) => ({
         ...state,
